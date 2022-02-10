@@ -13,9 +13,10 @@ $color3: #222;
 $color4: #0f0;
 $color5: rgba(0,255,0,.2);
 $color6: rgba(0,255,0,.4);
-// $color7:;
-// $color8:;
-// $color9:;
+$color7:rgba(0,255,0,.6);
+$color8:rgba(0,255,0,.8);
+$color9:rgba(0,255,0,1);
+$colorWhite: #FFF;
 
 body {
     display: flex;
@@ -23,7 +24,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: $color1;
-    //font-family: "Poppins", sans-serif;
+    font-family: "Torus Notched", sans-serif;
 }
 .cube {
     position: relative;
@@ -46,6 +47,22 @@ body {
             height: 100%;
             background: $color2;
             transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-style: preserve-3d;
+            & h2 {
+                position: absolute;
+                font-size: 10em;
+                color: $colorWhite;
+                transform: translateZ(50px);
+                user-select: none;
+                &:nth-child(1) {
+                    color: $B00001;
+                    transform: rotateZ(0) translateY(20px);
+                    filter: blur(2px);
+                }
+            }
         }
     }
 }
